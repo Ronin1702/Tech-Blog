@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    {{> header}}
+    {{{body}}}
+    {{> footer}}
+    <script src="/public/js/dashboard.js"></script>
+
+
+    {{#if logged_in}}
+      <script src="/public/js/logout.js"></script>
+    {{/if}}
+  </body>
+</html>
