@@ -68,12 +68,6 @@ mysql -u root -p
 source ./db/schema.sql
 ```
 
-* Seed the application by entering the commands below:
-
-```bash
-npm run seed
-```
-
 [*back to top*](#table-of-contents)
 
 ## Usage
