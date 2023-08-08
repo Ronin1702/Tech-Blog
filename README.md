@@ -140,7 +140,7 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 [![Tweet about this](https://img.shields.io/static/v1.svg?label=Tweet%20about%20this&message=🎵&color=blue&logo=twitter&style=social)](https://rb.gy/4mykl)
 
 * GitHub Repo: [Tech-Blog](https://github.com/Ronin1702/E-commerce-Back-End)
-<!-- * Deployed Application: [Click Here]() -->
+* Deployed *Heroku* Application: [Click Here](https://tech-blog-3000-6aa1a4d8137a.herokuapp.com/)
 
 [*back to top*](#table-of-contents)
 
