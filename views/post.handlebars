@@ -50,7 +50,7 @@
             <textarea id="comment-content" required></textarea>
           </div>
           <div class="ui primary submit labeled icon button" onclick="addComment(event,{{post.id}})">
-            <i class="icon edit"></i> Add Reply
+            <i class="icon edit"></i> Add Comment
           </div>
         </form>
       </div>
@@ -67,7 +67,7 @@
         {{#if post.Comments.length}}
           {{post.Comments.length}} comments
         {{else}}
-          0 comments
+          0 comment
         {{/if}}
       </div>
       <div class="content show-hide">

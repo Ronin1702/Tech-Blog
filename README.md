@@ -27,10 +27,17 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 * [![Node.js](https://img.shields.io/badge/Node.js®-v20.4.0-blue?logo=node.js)](https://nodejs.org/en)
 
 * [![npm](https://img.shields.io/badge/npm-v9.8.0-blue?logo=npm)](https://docs.npmjs.com/cli/v9/)
-  * [![DotEnv Package](https://img.shields.io/badge/DotEnv-8.2.0-green?logo=dotenv)](https://www.npmjs.com/package/dotenv)
-  * [![Express Package](https://img.shields.io/badge/Express-4.17.1-green?logo=express)](https://www.npmjs.com/package/express)
-  * [![MySQL2 Package](https://img.shields.io/badge/MySQL2-2.1.0-green?logo=mysql)](https://www.npmjs.com/package/https://www.npmjs.com/package/mysql2)
-  * [![Sequelize Package](https://img.shields.io/badge/sequelize-5.21.7-green?logo=sequelize)](https://www.npmjs.com/package/https://www.npmjs.com/package/sequelize)
+  * [![bcrypt Package](https://img.shields.io/badge/bcrypt-5.1.0-green?logo=npm)](https://www.npmjs.com/package/bcrypt)
+  * [![connect-session-sequelize Package](https://img.shields.io/badge/Connect--Session--Sequelize-7.1.7-green?logo=npm)](https://www.npmjs.com/package/connect-session-sequelize)
+  * [![DotEnv Package](https://img.shields.io/badge/DotEnv-16.3.1-green?logo=dotenv)](https://www.npmjs.com/package/dotenv)
+  * [![Express Package](https://img.shields.io/badge/Express-4.18.2-green?logo=express)](https://www.npmjs.com/package/express)
+  * [![express-handlebars Package](https://img.shields.io/badge/Express--Handlebars-7.1.1-green?logo=express)](https://www.npmjs.com/package/express-handlebars)
+  * [![express-session Package](https://img.shields.io/badge/Express--Session-1.17.3-green?logo=express)](https://www.npmjs.com/package/express-session)
+  * [![Fomantic-UI Package](https://img.shields.io/badge/Fomantic--UI-2.9.2-green?logo=npm)](https://fomantic-ui.com/)
+  * [![handlebars Package](https://img.shields.io/badge/Handlebars-4.7.8-green?logo=handlebars.js)](https://handlebarsjs.com/)
+  * [![Moment Package](https://img.shields.io/badge/Moment-2.29.4-green?logo=npm)](https://momentjs.com/)
+  * [![MySQL2 Package](https://img.shields.io/badge/MySQL2-2.1.0-green?logo=mysql)](https://www.npmjs.com/package/mysql2)
+  * [![Sequelize Package](https://img.shields.io/badge/sequelize-5.21.7-green?logo=sequelize)](https://www.npmjs.com/package/sequelize)
 
 [*back to top*](#table-of-contents)
 
@@ -45,7 +52,7 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 >```
 >
 >```bash
->npm i dotenv@8.2.0 express@4.17.1 mysql2@2.1.0 sequelize@5.21.7
+>npm i bcrypt@5.1.0 connect-session-sequelize@7.1.7 dotenv@16.3.1 express@4.18.2 express-handlebars@7.1.1 express-session@1.17.3 fomantic-ui@2.9.2 handlebars@4.7.8 moment@2.29.4 mysql2@3.6.0 sequelize@6.32.1
 >```
 >
 > **Important**: Please @ the **EXACT** versions as shown above to ensure the functionality of this application.
@@ -71,7 +78,7 @@ mysql -u root -p
 source ./db/schema.sql
 ```
 
->Note: If you Git Fork this repo and want to deploy on Heroku, please make sure you set the environment variable with the CLI command below:
+>Note: If you would like to `git fork` this repo and deploy it on *Heroku*, please make sure to set the environment variable with the `Heroku CLI` command below:
 >
 >```bash
 >heroku config:set SESSION_SECRET=your-secret-key
@@ -130,8 +137,18 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 
 ## Screenshots
 
-* Click the Insomnia Screenshot below to view the walkthrough video:
-<!-- [![Main Page](./img/)]() -->
+* Home Page
+![Home](./images/Home.png)
+* Sign Up
+![Sign-up](./images/Signup.png)
+* Login
+![Login Page](./images/Login.png)
+* View Posts and Add Comments
+![Posts and Comments](./images/Comment.png)
+* Dashboard/New Post
+![Dashboard Page](./images/Dashboard.png)
+* Update/Delete
+![Update/Delete](./images/Update:Delete.png)
 
 [*back to top*](#table-of-contents)
 
@@ -140,7 +157,7 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 [![Tweet about this](https://img.shields.io/static/v1.svg?label=Tweet%20about%20this&message=🎵&color=blue&logo=twitter&style=social)](https://rb.gy/4mykl)
 
 * GitHub Repo: [Tech-Blog](https://github.com/Ronin1702/E-commerce-Back-End)
-* Deployed *Heroku* Application: [Click Here](https://tech-blog-3000-6aa1a4d8137a.herokuapp.com/)
+* Deployed *Heroku* Application: [Tech-Blog-3000](https://tech-blog-3000-6aa1a4d8137a.herokuapp.com/)
 
 [*back to top*](#table-of-contents)
 
