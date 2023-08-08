@@ -12,7 +12,7 @@ const path = require('path'),
   handlebars = expressHandlebars.create({ helpers }),
   sesh = {
     // secret used to sign the session ID cookie
-    secret: process.env.SECRET,
+    secret: process.env.SESSION_SECRET,
     cookie: {
       // session expiration in milliseconds (15 minutes)
       maxAge: 900000,
