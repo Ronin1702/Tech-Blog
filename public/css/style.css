@@ -88,7 +88,7 @@ body {
     color: white;
 }
 .main-title:hover{
-    color: greenyellow;
+    color: black;
     opacity: 75%;
 }
 .ui.card .meta, .ui.cards>.card .meta {
