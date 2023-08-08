@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // initialize variables
 const path = require('path'),
       express = require('express'),
@@ -8,7 +10,7 @@ const path = require('path'),
       sequelize = require('./config/connection'),
       SequelizeStore = require('connect-session-sequelize')(session.Store),
       app = express(),
-      PORT = process.env.PORT || 3001,
+      PORT = process.env.PORT || 3000,
       handlebars = exphbs.create({ helpers }),
       sesh = {
         // secret used to sign the session ID cookie
