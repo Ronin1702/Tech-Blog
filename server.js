@@ -4,14 +4,14 @@ require('dotenv').config();
 const path = require('path'),
       express = require('express'),
       session = require('express-session'),
-      exphbs = require('express-handlebars'),
+      expressHandlebars = require('express-handlebars'),
       routes = require('./controllers'),
       helpers = require('./utils/helpers'),
       sequelize = require('./config/connection'),
       SequelizeStore = require('connect-session-sequelize')(session.Store),
       app = express(),
       PORT = process.env.PORT || 3000,
-      handlebars = exphbs.create({ helpers }),
+      handlebars = expressHandlebars.create({ helpers }),
       sesh = {
         // secret used to sign the session ID cookie
         secret: process.env.SECRET, 
