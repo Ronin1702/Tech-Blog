@@ -1,15 +1,12 @@
--- drop the database if it exists
-DROP DATABASE IF EXISTS techblog_db;
-
--- create the database
-CREATE DATABASE techblog_db;
-
 -- use the database
-USE techblog_db;
+USE yvhb4mt0tabkep2l;
 
+ALTER TABLE comment DROP FOREIGN KEY comment_ibfk_1;
+ALTER TABLE comment DROP FOREIGN KEY comment_ibfk_2;
+
+DROP TABLE IF EXISTS comment;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS post;
-DROP TABLE IF EXISTS comment;
 
 -- create the user table
 CREATE TABLE Users (
