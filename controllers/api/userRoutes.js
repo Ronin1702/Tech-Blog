@@ -1,6 +1,6 @@
 // initialize variables
 const router = require('express').Router(),
-      { Users } = require('../../models');
+  { Users } = require('../../models');
 
 /**
  * @createUser
@@ -11,16 +11,20 @@ router.post('/create', async (req, res) => {
   try {
     // create a new user
     const newUser = await Users.create({
-      user_name: req.body.user_name, // user name
-      email: req.body.email, // email
-      password: req.body.password // password
+      user_name: req.body.user_name,
+      email: req.body.email,
+      password: req.body.password
     }),
-    // get the updated user data
-    userData = await Users.findOne({ where: { email: newUser.email } });
-    req.session.save(() => { // save the session details
-      req.session.logged_in_id = userData.id; // logged in id
-      req.session.logged_in = true; // logged in true
-      res.json({ user: userData, message: 'Successful login.' }); // return user data and success message
+      // get the updated user data
+      userData = await Users.findOne({ where: { email: newUser.email } });
+    // save the session details
+    req.session.save(() => {
+      // logged in id
+      req.session.logged_in_id = userData.id;
+      // if logged in true
+      req.session.logged_in = true;
+      // return user data and success message
+      res.json({ user: userData, message: 'Successful login.' });
     });
   }
   // catch and handle the error 
@@ -70,7 +74,7 @@ router.post('/login', async (req, res) => {
       // else, return status 200 and success message
       res.status(200).json({ message: 'You are now logged in.' });
     });
-  } 
+  }
   // catch and handle the error
   catch (err) {
     // return status 500 and error message
