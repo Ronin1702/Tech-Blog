@@ -46,16 +46,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Register routes
 app.use(routes);
 
-// Error handling
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something is wrong!');
-});
-
-// Handle 404 errors
-app.use((req, res, next) => {
-    res.status(404).send('Not Found');
-});
 
 // Sync sequelize models to the database, then start the server
 sequelize.sync({ force: false }).then(() => {
