@@ -1,5 +1,5 @@
 // initialize variables
-const Post = require('./Posts')
+const Post = require('./Post')
 const Comment = require('./Comment')
 const Users = require('./User')
 
