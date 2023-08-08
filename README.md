@@ -53,9 +53,12 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 **Before you start, make sure to created a *`.env`* file in the root directory as the example shown below:**
 
 ```bash
-DB_USER=Replace this with your own username, e.g. "root"
-DB_PASSWORD=Replace this with your own password
+DB_USER=root
+DB_PASSWORD=your password to the database
 DB_NAME=techBlog_db
+DB_HOST=localhost
+JAWSDB_URL=your JawsDB connection string
+SESSION_SECRET=your-secret-key
 ```
 
 * Source the `schema.sql` in `MySQL`:
@@ -67,6 +70,13 @@ mysql -u root -p
 ```mysql
 source ./db/schema.sql
 ```
+
+>Note: If you Git Fork this repo and want to deploy on Heroku, please make sure you set the environment variable with the CLI command below:
+>
+>```bash
+>heroku config:set SESSION_SECRET=your-secret-key
+>```
+>
 
 [*back to top*](#table-of-contents)
 
