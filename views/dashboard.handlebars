@@ -1,6 +1,6 @@
 <div class="main-content">
   <div class="hero">
-    <h1>Tech Blogs</h1>
+    <h1>Tech Blog Dashboard</h1>
   </div>
   {{#if updatingBlog}}
     <div class="ui card">
@@ -12,11 +12,11 @@
         <div class="ui form">
           <div class="field">
             {{this.id}}
-            <label>Blog Title:</label>
-            <input type="text" id="updated-blog-title" name="blog-title" placeholder="Enter the title" value="{{users.post_title}}">
+            <label>Update Blog Title:</label>
+            <input type="text" id="updated-blog-title" name="blog-title" placeholder="Enter Blog Title" value="{{users.post_title}}">
           </div>
           <div class="field">
-            <label>Enter your blog details:</label>
+            <label>Update Blog Content:</label>
             <textarea id="updated-blog-content">{{users.post_content}}</textarea>
           </div>
           <button class="ui primary button" onclick="updateBlog(event,'{{users.id}}')">
@@ -49,11 +49,11 @@
             <input type="hidden" id="blog-user-id" name="user-id" value="{{logged_in_id}}" />
             <div class="ui form">
               <div class="field">
-                <label>Blog Title:</label>
+                <label>New Blog Title:</label>
                 <input type="text" id="blog-title" name="blog-title" placeholder="Enter the title">
               </div>
               <div class="field">
-                <label>Enter your blog details:</label>
+                <label>Enter New Blog Details:</label>
                 <textarea id="blog-content"></textarea>
               </div>
               <button class="ui primary button" onclick="addBlog(event)">

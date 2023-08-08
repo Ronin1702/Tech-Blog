@@ -3,14 +3,14 @@
     --font-styled: "Caveat", sans-serif;
 }
 body {
-    background-color: grey !important;
+    background-color: rgb(60, 60, 60) !important;
 }
 .hidden {
     display: none;
 }
 .main-content {
     margin: 0;
-    min-height: 86vh;
+    min-height: 85vh;
 }
 .ui.menu {
     margin-bottom: 0 !important;
@@ -30,7 +30,7 @@ body {
 #login,
 #sign-up,
 .ui.attached.tabular.menu {
-    width: 23em !important;
+    width: 25em !important;
     margin: 0 auto !important;
 }
 .hero {
@@ -69,10 +69,10 @@ body {
     padding: 0 !important;
 }
 .ui.ui.secondary.inverted.pointing.menu .active.item {
-    border-color: black !important;
+    border-color: white !important;
 }
 .ui.card {
-    width: 90% !important;
+    width: 95% !important;
     margin: 1em auto !important;
 }
 .show-btn,
@@ -84,8 +84,12 @@ body {
     color: white;
 }
 .main-title {
-    background-color: #0d6efd !important;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  #0d6efd 0%, rgba(160, 215, 255, 0.5) 90% ) !important;
     color: white;
+}
+.main-title:hover{
+    color: greenyellow;
+    opacity: 75%;
 }
 .ui.card .meta, .ui.cards>.card .meta {
     color: #191919 !important;
