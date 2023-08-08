@@ -1,7 +1,7 @@
 // initialize variables
-const Post = require('./Post'),
-      Comment = require('./Comment'),
-      Users = require('./User');
+const Post = require('./Post.js'),
+      Comment = require('./Comment.js'),
+      Users = require('./User.js');
 
 // Users: one-to-many (user has many posts)
 Users.hasMany(Post, {

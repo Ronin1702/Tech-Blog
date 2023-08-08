@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
 </head>
+
 <body>
-    {{> header}}
-    {{{body}}}
-    {{> footer}}
-    <script src="/public/js/dashboard.js"></script>
+  {{> header}}
+  {{{body}}}
+  {{> footer}}
+  <script src="/public/js/dashboard.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  
+  {{#if logged_in}}
+  <script src="/public/js/logout.js"></script>
+  {{/if}}
+</body>
 
-
-    {{#if logged_in}}
-      <script src="/public/js/logout.js"></script>
-    {{/if}}
-  </body>
 </html>
