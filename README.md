@@ -148,7 +148,7 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 * Dashboard/New Post
 ![Dashboard Page](./images/Dashboard.png)
 * Update/Delete
-![Update/Delete](./images/Update:Delete.png)
+![Update/Delete](./images/UpdateAndDelete.png)
 
 [*back to top*](#table-of-contents)
 
