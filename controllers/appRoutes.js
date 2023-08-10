@@ -1,7 +1,7 @@
 // initialize variables
 const router = require('express').Router(),
-      { Users, Post, Comment } = require('../models'),
-      withAuth = require('../utils/auth');
+  { Users, Post, Comment } = require('../models'),
+  withAuth = require('../utils/auth');
 /**
  * @homePageRoute
  * Redirects the user to the home page
@@ -11,18 +11,24 @@ router.get('/', async (req, res) => {
   try {
     // get all posts from the database to populate the home page
     const postData = await Post.findAll({
-      order: [['post_date', 'DESC']], // order by post_date, descending
+      // order by post_date, descending
+      order: [['post_date', 'DESC']],
       include: [
         {
-          model: Users, // include user model
-          attributes: ['user_name', 'email'], // return user_name and email
+          // include user model
+          model: Users,
+          // return user_name and email
+          attributes: ['user_name', 'email'],
         },
         {
-          model: Comment, // include comment model
+          // include comment model
+          model: Comment,
           include: [
             {
-              model: Users, // include users model
-              attributes: ['user_name', 'email'], // return user_name and email
+              // include users model
+              model: Users,
+              // return user_name and email
+              attributes: ['user_name', 'email'],
             },
           ],
         },
@@ -32,11 +38,16 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
     // render home.handlebars
     res.render('home', {
-      posts, // blog data
-      logged_in: req.session.logged_in, // logged in session
-      logged_in_id: req.session.logged_in_id, // logged in session id
-      url: req.url, // current url path
-      postId: req.params.postId, // post id
+      // blog data
+      posts,
+      // logged in session
+      logged_in: req.session.logged_in,
+      // logged in session id
+      logged_in_id: req.session.logged_in_id,
+      // current url path
+      url: req.url,
+      // post id
+      postId: req.params.postId,
     });
   }
   // catch and handle the error 
@@ -57,15 +68,20 @@ router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // find all posts created by the authenticated user
     const userData = await Users.findAll({
-      attributes: { exclude: ['password'] }, // exclude password
-      order: [['user_name', 'ASC']], // sort by user_name, ascending
+      // exclude password
+      attributes: { exclude: ['password'] },
+      // sort by user_name, ascending
+      order: [['user_name', 'ASC']],
       include: [
         {
-          model: Post, // include post model
+          // include post model
+          model: Post,
           include: [
             {
-              model: Users, // include users model
-              attributes: ['user_name', 'email'], // return user_name and email
+              // include users model
+              model: Users,
+              // return user_name and email
+              attributes: ['user_name', 'email'],
             }
           ],
           // where user_id === authenticated users id
@@ -77,11 +93,16 @@ router.get('/dashboard', withAuth, async (req, res) => {
     const users = userData.map((user) => user.get({ plain: true }));
     // render dashboard.handlebars
     res.render('dashboard', {
-      users, // blog data
-      logged_in: req.session.logged_in, // logged in session
-      logged_in_id: req.session.logged_in_id, // logged in session id
-      url: req.url, // current url path
-      updatingBlog: false //changes what is displayed on the dashboard 
+      // blog data
+      users,
+      // logged in session
+      logged_in: req.session.logged_in,
+      // logged in session id
+      logged_in_id: req.session.logged_in_id,
+      // current url path
+      url: req.url,
+      //changes what is displayed on the dashboard 
+      updatingBlog: false
     });
   }
   // catch and handle the error  
@@ -105,8 +126,10 @@ router.get('/dashboard/:postId', withAuth, async (req, res) => {
     const postData = await Post.findByPk(req.params.postId, {
       include: [
         {
-          model: Users, // include users model
-          attributes: ['user_name', 'email'], // include user_name and email
+          // include users model
+          model: Users,
+          // include user_name and email
+          attributes: ['user_name', 'email'],
         }
       ],
     });
@@ -119,11 +142,16 @@ router.get('/dashboard/:postId', withAuth, async (req, res) => {
     const users = postData.get({ plain: true });
     // render dashboard.handlebars
     res.render('dashboard', {
-      users, // blog data
-      logged_in: req.session.logged_in, // logged in session
-      logged_in_id: req.session.logged_in_id, // logged in session id
-      url: req.url, // current url path
-      updatingBlog: true //changes what is displayed on the dashboard 
+      // blog data
+      users,
+      // logged in session
+      logged_in: req.session.logged_in,
+      // logged in session id
+      logged_in_id: req.session.logged_in_id,
+      // current url path
+      url: req.url,
+      //changes what is displayed on the dashboard 
+      updatingBlog: true
     });
   }
   // catch and handle the error   
@@ -148,15 +176,20 @@ router.get('/posts/:id', async (req, res) => {
     const postData = await Post.findByPk(postId, {
       include: [
         {
-          model: Users, // include users model
-          attributes: ['user_name', 'email'], // include user_name and email
+          // include users model
+          model: Users,
+          // include user_name and email
+          attributes: ['user_name', 'email'],
         },
         {
-          model: Comment, // include comment model
+          // include comment model
+          model: Comment,
           include: [
             {
-              model: Users, // include users model
-              attributes: ['user_name', 'email'], // include user_name and email
+              // include users model
+              model: Users,
+              // include user_name and email
+              attributes: ['user_name', 'email'],
             },
           ],
         },
@@ -171,10 +204,14 @@ router.get('/posts/:id', async (req, res) => {
     const post = postData.get({ plain: true });
     // render post.handlebars
     res.render('post', {
-      post, // blog data
-      logged_in: req.session.logged_in, // logged in session
-      logged_in_id: req.session.logged_in_id, // logged in session id
-      url: req.url // current url path
+      // blog data
+      post,
+      // logged in session
+      logged_in: req.session.logged_in,
+      // logged in session id
+      logged_in_id: req.session.logged_in_id,
+      // current url path
+      url: req.url
     });
   }
   // catch and handle the error   
@@ -191,7 +228,8 @@ router.get('/posts/:id', async (req, res) => {
 router.get('/login', (req, res) => {
   // render login.handlebars
   res.render('login', {
-    url: req.url // current url path
+    // current url path
+    url: req.url
   });
 });
 
