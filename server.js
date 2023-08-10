@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 // initialize variables
 const path = require('path'),
   express = require('express'),
