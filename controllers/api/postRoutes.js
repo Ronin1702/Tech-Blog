@@ -1,6 +1,6 @@
 // initialize variables
 const router = require('express').Router(),
-      { Users, Post } = require('../../models');
+  { Users, Post } = require('../../models');
 
 /**
  * @getPosts
@@ -31,20 +31,26 @@ router.get('/list', async (req, res) => {
   try {
     // fetch user data with associated posts
     const userData = await Users.findAll({
-      attributes: { exclude: ['password'] }, // exclude the password field 
-      order: [['user_name', 'ASC']], // sort by user_name in ascending order
+      // exclude the password field 
+      attributes: { exclude: ['password'] },
+      // sort by user_name in ascending order
+      order: [['user_name', 'ASC']],
       include: [
         {
-          model: Post, // include the post model
+          // include the post model
+          model: Post,
           include: [
             {
-              model: Users, // include the users model
-              attributes: ['user_name', 'email'], // only retrieve the user_name and email
+              // include the users model
+              model: Users,
+              // only retrieve the user_name and email
+              attributes: ['user_name', 'email'],
             }
           ],
-          where: { 
-            user_id: req.session.logged_in_id // filter posts based on user_id
-          } 
+          where: {
+            // filter posts based on user_id
+            user_id: req.session.logged_in_id
+          }
         },
       ],
     });
@@ -69,9 +75,12 @@ router.post('/add', async (req, res) => {
   try {
     // create a new blog using the req.body data
     const newBlog = await Post.create({
-        post_title: req.body.post_title, // title
-        post_content: req.body.post_content, // content
-        user_id: req.body.user_id // user id
+      // title
+      post_title: req.body.post_title,
+      // content
+      post_content: req.body.post_content,
+      // user id
+      user_id: req.body.user_id
     });
     // search for the new blog
     const foundBlog = await Post.findByPk(newBlog.id);
