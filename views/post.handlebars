@@ -9,29 +9,46 @@
   {{#if logged_in}}
     <div class="ui card">
       <div class="content">
-        <div class="right floated meta"><strong>{{formatDate post.post_date}}</strong></div>
-        <p><strong>Posted by:</strong>&nbsp;<a href="mailto:{{post.user.email}}">{{post.user.user_name}}</a></p>
+        <div class="right floated meta"><strong>{{formatDate
+              post.post_date
+            }}</strong></div>
+        <p><strong>Posted by:</strong>&nbsp;<a
+            href="mailto:{{post.user.email}}"
+          >{{post.user.user_name}}</a></p>
         <p>{{post.post_content}}</p>
       </div>
       <div class="content comments-length">
         <i class="comment icon"></i>
-        {{post.Comments.length}} comments
+        {{post.Comments.length}}
+        comments
       </div>
       <div class="content show-hide">
         <div class="row align-center mb-5">
-          <div class="comment-btn-wrapper" onclick="toggleComments(this,{{post.id}})">
+          <div
+            class="comment-btn-wrapper"
+            onclick="toggleComments(this,{{post.id}})"
+          >
             <h3 class="ui show-btn">
-              <i class="caret square down outline icon" style="visibility: visible;"></i>
+              <i
+                class="caret square down outline icon"
+                style="visibility: visible;"
+              ></i>
               Show Comments
             </h3>
             <h3 class="ui hide-btn hidden">
-              <i class="caret square up outline icon" style="visibility: visible;"></i>
+              <i
+                class="caret square up outline icon"
+                style="visibility: visible;"
+              ></i>
               Hide Comments
             </h3>
           </div>
         </div>
       </div>
-      <div class="content ui comments hide-btn hidden" id="comments-wrapper-{{post.id}}">
+      <div
+        class="content ui comments hide-btn hidden"
+        id="comments-wrapper-{{post.id}}"
+      >
         {{#each post.Comments as |comment|}}
           <div class="comment">
             <div class="content">
@@ -49,8 +66,12 @@
           <div class="field">
             <textarea id="comment-content" required></textarea>
           </div>
-          <div class="ui primary submit labeled icon button" onclick="addComment(event,{{post.id}})">
-            <i class="icon edit"></i> Add Comment
+          <div
+            class="ui primary submit labeled icon button"
+            onclick="addComment(event,{{post.id}})"
+          >
+            <i class="icon edit"></i>
+            Add Comment
           </div>
         </form>
       </div>
@@ -58,33 +79,50 @@
   {{else}}
     <div class="ui card">
       <div class="content">
-        <div class="right floated meta"><strong>{{formatDate post.post_date}}</strong></div>
-        <p><strong>Posted by:</strong>&nbsp;<a href="mailto:{{post.user.email}}">{{post.user.user_name}}</a></p>
+        <div class="right floated meta"><strong>{{formatDate
+              post.post_date
+            }}</strong></div>
+        <p><strong>Posted by:</strong>&nbsp;<a
+            href="mailto:{{post.user.email}}"
+          >{{post.user.user_name}}</a></p>
         <p>{{post.post_content}}</p>
       </div>
       <div class="content comments-length">
         <i class="comment icon"></i>
         {{#if post.Comments.length}}
-          {{post.Comments.length}} comments
+          {{post.Comments.length}}
+          comments
         {{else}}
           0 comment
         {{/if}}
       </div>
       <div class="content show-hide">
         <div class="row align-center mb-5">
-          <div class="comment-btn-wrapper" onclick="toggleComments(this,{{post.id}})">
+          <div
+            class="comment-btn-wrapper"
+            onclick="toggleComments(this,{{post.id}})"
+          >
             <h3 class="ui show-btn">
-              <i class="caret square down outline icon" style="visibility: visible;"></i>
+              <i
+                class="caret square down outline icon"
+                style="visibility: visible;"
+              ></i>
               Show Comments
             </h3>
             <h3 class="ui hide-btn hidden">
-              <i class="caret square up outline icon" style="visibility: visible;"></i>
+              <i
+                class="caret square up outline icon"
+                style="visibility: visible;"
+              ></i>
               Hide Comments
             </h3>
           </div>
         </div>
       </div>
-      <div class="content ui comments hide-btn hidden" id="comments-wrapper-{{post.id}}">
+      <div
+        class="content ui comments hide-btn hidden"
+        id="comments-wrapper-{{post.id}}"
+      >
         {{#each post.Comments as |comment|}}
           <div class="comment">
             <div class="content">

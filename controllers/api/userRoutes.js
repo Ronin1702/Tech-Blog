@@ -1,20 +1,20 @@
 // initialize variables
-const router = require('express').Router(),
-  { Users } = require('../../models');
+const router = require("express").Router(),
+  { Users } = require("../../models");
 
 /**
  * @createUser
  * creates a new user on sign up
  */
-router.post('/create', async (req, res) => {
+router.post("/create", async (req, res) => {
   // check if code throws an error
   try {
     // create a new user
     const newUser = await Users.create({
-      user_name: req.body.user_name,
-      email: req.body.email,
-      password: req.body.password
-    }),
+        user_name: req.body.user_name,
+        email: req.body.email,
+        password: req.body.password,
+      }),
       // get the updated user data
       userData = await Users.findOne({ where: { email: newUser.email } });
     // save the session details
@@ -24,11 +24,10 @@ router.post('/create', async (req, res) => {
       // if logged in true
       req.session.logged_in = true;
       // return user data and success message
-      res.json({ user: userData, message: 'Successful login.' });
+      res.json({ user: userData, message: "Successful login." });
     });
-  }
-  // catch and handle the error 
-  catch (err) {
+  } catch (err) {
+    // catch and handle the error
     // return status 500 and error message
     res.status(500).json(err);
   }
@@ -38,15 +37,19 @@ router.post('/create', async (req, res) => {
  * @login
  * authenticates the user
  */
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
   // check if code throws an error
   try {
     // search for user based on their username
-    const userData = await Users.findOne({ where: { user_name: req.body.username } });
+    const userData = await Users.findOne({
+      where: { user_name: req.body.username },
+    });
     // if user not found
     if (!userData) {
       // return status 400 and error message
-      res.status(400).json({ error: 'Username is not registered. Please sign up.' });
+      res
+        .status(400)
+        .json({ error: "Username is not registered. Please sign up." });
       // return
       return;
     }
@@ -55,7 +58,7 @@ router.post('/login', async (req, res) => {
     // if password is invalid
     if (!validPassword) {
       // return status 400 and error message
-      res.status(400).json({ error: 'Incorrect password.' });
+      res.status(400).json({ error: "Incorrect password." });
       // return
       return;
     }
@@ -67,16 +70,17 @@ router.post('/login', async (req, res) => {
       // if there is an error
       if (err) {
         // return status 400 and error message
-        res.status(400).json({ error: 'An error occurred while saving the session.' });
+        res
+          .status(400)
+          .json({ error: "An error occurred while saving the session." });
         // return
         return;
       }
       // else, return status 200 and success message
-      res.status(200).json({ message: 'You are now logged in.' });
+      res.status(200).json({ message: "You are now logged in." });
     });
-  }
-  // catch and handle the error
-  catch (err) {
+  } catch (err) {
+    // catch and handle the error
     // return status 500 and error message
     res.status(500).json(err);
   }
@@ -86,7 +90,7 @@ router.post('/login', async (req, res) => {
  * @logout
  * Logs the user out
  */
-router.get('/logout', (req, res) => {
+router.get("/logout", (req, res) => {
   // if the user is logged in
   if (req.session.logged_in) {
     // destroy the session
@@ -95,7 +99,7 @@ router.get('/logout', (req, res) => {
       res.status(204).end();
     });
   }
-  // if the user is not logged in 
+  // if the user is not logged in
   else {
     // return status 404
     res.status(404).end();

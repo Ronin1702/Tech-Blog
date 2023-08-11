@@ -1,6 +1,6 @@
 // initialize variables
-const { Model, DataTypes } = require('sequelize'),
-      sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize"),
+  sequelize = require("../config/connection");
 
 // post model definition
 class Post extends Model {}
@@ -31,10 +31,10 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Users',
-        key: 'id',
+        model: "Users",
+        key: "id",
         unique: true,
-        onDelete: 'CASCADE',
+        onDelete: "CASCADE",
       },
       validate: {
         is: /^\d+$/,
@@ -55,10 +55,10 @@ Post.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Post',
-    createdAt: 'created_at',
-    updatedAt: 'updated_at',
-  }
+    modelName: "Post",
+    createdAt: "created_at",
+    updatedAt: "updated_at",
+  },
 );
 
 module.exports = Post;

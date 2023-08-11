@@ -1,9 +1,9 @@
 // initialize variables
-const sequelize = require('../config/connection'),
-      { Users, Post, Comment } = require('../models'),
-      userData = require('./userData.json'),
-      postData = require('./postData.json'),
-      commentData = require('./commentData.json');
+const sequelize = require("../config/connection"),
+  { Users, Post, Comment } = require("../models"),
+  userData = require("./userData.json"),
+  postData = require("./postData.json"),
+  commentData = require("./commentData.json");
 
 // seed the database with initial data
 const seedDatabase = async () => {

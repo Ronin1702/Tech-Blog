@@ -4,7 +4,7 @@
   </div>
   <input type="hidden" id="user-id" name="user-id" value="{{logged_in_id}}" />
   {{#if logged_in}}
-    {{#each posts as |post| }}
+    {{#each posts as |post|}}
       <div class="ui card">
         <a href="/posts/{{post.id}}" class="content main-title">
           <div class="right floated meta">{{formatDate post.post_date}}</div>
@@ -13,7 +13,7 @@
       </div>
     {{/each}}
   {{else}}
-    {{#each posts as |post| }}
+    {{#each posts as |post|}}
       <div class="ui card">
         <a href="/posts/{{post.id}}" class="content main-title">
           <div class="right floated meta">{{formatDate post.post_date}}</div>
@@ -22,5 +22,4 @@
       </div>
     {{/each}}
   {{/if}}
-  </div>
 </div>

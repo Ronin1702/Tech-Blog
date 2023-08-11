@@ -1,6 +1,6 @@
 // initialize variables
-const { Model, DataTypes } = require('sequelize'),
-      sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize"),
+  sequelize = require("../config/connection");
 
 // comment model definition
 class Comment extends Model {}
@@ -9,40 +9,40 @@ class Comment extends Model {}
 Comment.init(
   {
     id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     comment_content: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
     comment_date: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    user_id: { 
-        type: DataTypes.INTEGER, 
-        allowNull: false, 
-        references: {
-            model: 'Users', 
-            key: 'id', 
-            onDelete: 'CASCADE'
-        },
-        validate: {
-            is: /^\d+$/ 
-        }
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "Users",
+        key: "id",
+        onDelete: "CASCADE",
+      },
+      validate: {
+        is: /^\d+$/,
+      },
     },
     post_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'Post',
-            key: 'id', 
-            onDelete: 'CASCADE'
-        }
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "Post",
+        key: "id",
+        onDelete: "CASCADE",
+      },
     },
     created_at: {
       type: DataTypes.DATE,
@@ -59,10 +59,10 @@ Comment.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Comment',
-    createdAt: 'created_at',
-    updatedAt: 'updated_at',
-  }
+    modelName: "Comment",
+    createdAt: "created_at",
+    updatedAt: "updated_at",
+  },
 );
 
 module.exports = Comment;

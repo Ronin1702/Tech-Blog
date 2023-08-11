@@ -1,7 +1,7 @@
 // initialize variables
-const { Model, DataTypes } = require('sequelize'),
-      bcrypt = require('bcrypt'),
-      sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize"),
+  bcrypt = require("bcrypt"),
+  sequelize = require("../config/connection");
 
 // users model definition
 class Users extends Model {
@@ -52,8 +52,8 @@ Users.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'users',
-  }
+    modelName: "users",
+  },
 );
 
 module.exports = Users;

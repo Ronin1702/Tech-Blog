@@ -1,53 +1,52 @@
 [
-    {
-      "user_name": "FakeNameA",
-      "email": "a@fakeemail.com",
-      "password": "fakepassword1"
-    },
-    {
-      "user_name": "FakeNameB",
-      "email": "b@fakeemail.com",
-      "password": "fakepassword2"
-    },
-    {
-      "user_name": "FakeNameC",
-      "email": "c@fakeemail.com",
-      "password": "fakepassword3"
-    },
-    {
-      "user_name": "FakeNameD",
-      "email": "d@fakeemail.com",
-      "password": "fakepassword4"
-    },
-    {
-      "user_name": "FakeNameE",
-      "email": "e@fakeemail.com",
-      "password": "fakepassword5"
-    },
-    {
-      "user_name": "FakeNameF",
-      "email": "f@fakeemail.com",
-      "password": "fakepassword6"
-    },
-    {
-      "user_name": "FakeNameG",
-      "email": "g@fakeemail.com",
-      "password": "fakepassword7"
-    },
-    {
-      "user_name": "FakeNameH",
-      "email": "h@fakeemail.com",
-      "password": "fakepassword8"
-    },
-    {
-      "user_name": "FakeNameI",
-      "email": "i@fakeemail.com",
-      "password": "fakepassword9"
-    },
-    {
-      "user_name": "FakeNameJ",
-      "email": "j@fakeemail.com",
-      "password": "fakepassword10"
-    }
-  ]
-  
+  {
+    "user_name": "FakeNameA",
+    "email": "a@fakeemail.com",
+    "password": "fakepassword1"
+  },
+  {
+    "user_name": "FakeNameB",
+    "email": "b@fakeemail.com",
+    "password": "fakepassword2"
+  },
+  {
+    "user_name": "FakeNameC",
+    "email": "c@fakeemail.com",
+    "password": "fakepassword3"
+  },
+  {
+    "user_name": "FakeNameD",
+    "email": "d@fakeemail.com",
+    "password": "fakepassword4"
+  },
+  {
+    "user_name": "FakeNameE",
+    "email": "e@fakeemail.com",
+    "password": "fakepassword5"
+  },
+  {
+    "user_name": "FakeNameF",
+    "email": "f@fakeemail.com",
+    "password": "fakepassword6"
+  },
+  {
+    "user_name": "FakeNameG",
+    "email": "g@fakeemail.com",
+    "password": "fakepassword7"
+  },
+  {
+    "user_name": "FakeNameH",
+    "email": "h@fakeemail.com",
+    "password": "fakepassword8"
+  },
+  {
+    "user_name": "FakeNameI",
+    "email": "i@fakeemail.com",
+    "password": "fakepassword9"
+  },
+  {
+    "user_name": "FakeNameJ",
+    "email": "j@fakeemail.com",
+    "password": "fakepassword10"
+  }
+]

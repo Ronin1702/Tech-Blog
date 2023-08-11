@@ -4,13 +4,13 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 ## Table of Contents
 
-* [Description](#description)
-* [Technology](#technology)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Screenshots](#screenshots)
-* [Links](#links)
-* [License](#license)
+- [Description](#description)
+- [Technology](#technology)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Links](#links)
+- [License](#license)
 
 ## Description
 
@@ -20,44 +20,44 @@ I WANT a CMS-style blog site
 SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```
 
-[*back to top*](#table-of-contents)
+[_back to top_](#table-of-contents)
 
 ## Technology
 
-* [![Node.js](https://img.shields.io/badge/Node.js®-v20.4.0-blue?logo=node.js)](https://nodejs.org/en)
+- [![Node.js](https://img.shields.io/badge/Node.js®-v20.4.0-blue?logo=node.js)](https://nodejs.org/en)
 
-* [![npm](https://img.shields.io/badge/npm-v9.8.0-blue?logo=npm)](https://docs.npmjs.com/cli/v9/)
-  * [![bcrypt Package](https://img.shields.io/badge/bcrypt-5.1.0-green?logo=npm)](https://www.npmjs.com/package/bcrypt)
-  * [![connect-session-sequelize Package](https://img.shields.io/badge/Connect--Session--Sequelize-7.1.7-green?logo=npm)](https://www.npmjs.com/package/connect-session-sequelize)
-  * [![DotEnv Package](https://img.shields.io/badge/DotEnv-16.3.1-green?logo=dotenv)](https://www.npmjs.com/package/dotenv)
-  * [![Express Package](https://img.shields.io/badge/Express-4.18.2-green?logo=express)](https://www.npmjs.com/package/express)
-  * [![express-handlebars Package](https://img.shields.io/badge/Express--Handlebars-7.1.1-green?logo=express)](https://www.npmjs.com/package/express-handlebars)
-  * [![express-session Package](https://img.shields.io/badge/Express--Session-1.17.3-green?logo=express)](https://www.npmjs.com/package/express-session)
-  * [![Fomantic-UI Package](https://img.shields.io/badge/Fomantic--UI-2.9.2-green?logo=npm)](https://fomantic-ui.com/)
-  * [![handlebars Package](https://img.shields.io/badge/Handlebars-4.7.8-green?logo=handlebars.js)](https://handlebarsjs.com/)
-  * [![Moment Package](https://img.shields.io/badge/Moment-2.29.4-green?logo=npm)](https://momentjs.com/)
-  * [![MySQL2 Package](https://img.shields.io/badge/MySQL2-2.1.0-green?logo=mysql)](https://www.npmjs.com/package/mysql2)
-  * [![Sequelize Package](https://img.shields.io/badge/sequelize-5.21.7-green?logo=sequelize)](https://www.npmjs.com/package/sequelize)
+- [![npm](https://img.shields.io/badge/npm-v9.8.0-blue?logo=npm)](https://docs.npmjs.com/cli/v9/)
+  - [![bcrypt Package](https://img.shields.io/badge/bcrypt-5.1.0-green?logo=npm)](https://www.npmjs.com/package/bcrypt)
+  - [![connect-session-sequelize Package](https://img.shields.io/badge/Connect--Session--Sequelize-7.1.7-green?logo=npm)](https://www.npmjs.com/package/connect-session-sequelize)
+  - [![DotEnv Package](https://img.shields.io/badge/DotEnv-16.3.1-green?logo=dotenv)](https://www.npmjs.com/package/dotenv)
+  - [![Express Package](https://img.shields.io/badge/Express-4.18.2-green?logo=express)](https://www.npmjs.com/package/express)
+  - [![express-handlebars Package](https://img.shields.io/badge/Express--Handlebars-7.1.1-green?logo=express)](https://www.npmjs.com/package/express-handlebars)
+  - [![express-session Package](https://img.shields.io/badge/Express--Session-1.17.3-green?logo=express)](https://www.npmjs.com/package/express-session)
+  - [![Fomantic-UI Package](https://img.shields.io/badge/Fomantic--UI-2.9.2-green?logo=npm)](https://fomantic-ui.com/)
+  - [![handlebars Package](https://img.shields.io/badge/Handlebars-4.7.8-green?logo=handlebars.js)](https://handlebarsjs.com/)
+  - [![Moment Package](https://img.shields.io/badge/Moment-2.29.4-green?logo=npm)](https://momentjs.com/)
+  - [![MySQL2 Package](https://img.shields.io/badge/MySQL2-2.1.0-green?logo=mysql)](https://www.npmjs.com/package/mysql2)
+  - [![Sequelize Package](https://img.shields.io/badge/sequelize-5.21.7-green?logo=sequelize)](https://www.npmjs.com/package/sequelize)
 
-[*back to top*](#table-of-contents)
+[_back to top_](#table-of-contents)
 
 ## Installation
 
-* Packages to support this application can be installed by using [*npm install*](https://docs.npmjs.com/cli/v9/commands/npm-install) commands.
+- Packages to support this application can be installed by using [_npm install_](https://docs.npmjs.com/cli/v9/commands/npm-install) commands.
 
-> **Note**: If you do not have a `package.json` in your directory already, enter command below to [*initiate*](https://docs.npmjs.com/cli/v9/commands/npm-init).
+> **Note**: If you do not have a `package.json` in your directory already, enter command below to [_initiate_](https://docs.npmjs.com/cli/v9/commands/npm-init).
 >
->```bash
->npm init -y
->```
+> ```bash
+> npm init -y
+> ```
 >
->```bash
->npm i bcrypt@5.1.0 connect-session-sequelize@7.1.7 dotenv@16.3.1 express@4.18.2 express-handlebars@7.1.1 express-session@1.17.3 fomantic-ui@2.9.2 handlebars@4.7.8 moment@2.29.4 mysql2@3.6.0 sequelize@6.32.1
->```
+> ```bash
+> npm i bcrypt@5.1.0 connect-session-sequelize@7.1.7 dotenv@16.3.1 express@4.18.2 express-handlebars@7.1.1 express-session@1.17.3 fomantic-ui@2.9.2 handlebars@4.7.8 moment@2.29.4 mysql2@3.6.0 sequelize@6.32.1
+> ```
 >
 > **Important**: Please @ the **EXACT** versions as shown above to ensure the functionality of this application.
 
-**Before you start, make sure to created a *`.env`* file in the root directory as the example shown below:**
+**Before you start, make sure to created a _`.env`_ file in the root directory as the example shown below:**
 
 ```bash
 DB_USER=root
@@ -68,7 +68,7 @@ JAWSDB_URL=your JawsDB connection string
 SESSION_SECRET=your-secret-key
 ```
 
-* Source the `schema.sql` in `MySQL`:
+- Source the `schema.sql` in `MySQL`:
 
 ```bash
 mysql -u root -p
@@ -78,24 +78,23 @@ mysql -u root -p
 source ./db/schema.sql
 ```
 
->Note: If you would like to `git fork` this repo and deploy it on *Heroku*, please make sure to set the environment variable with the `Heroku CLI` command below:
+> Note: If you would like to `git fork` this repo and deploy it on _Heroku_, please make sure to set the environment variable with the `Heroku CLI` command below:
 >
->```bash
->heroku config:set SESSION_SECRET=your-secret-key
->```
->
+> ```bash
+> heroku config:set SESSION_SECRET=your-secret-key
+> ```
 
-[*back to top*](#table-of-contents)
+[_back to top_](#table-of-contents)
 
 ## Usage
 
-* This application can be invoked by using the following command:
+- This application can be invoked by using the following command:
 
 ```bash
 npm start
 ```
 
-* Workflow:
+- Workflow:
 
 ```md
 GIVEN a CMS-style blog site
@@ -133,39 +132,40 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
 ```
 
-[*back to top*](#table-of-contents)
+[_back to top_](#table-of-contents)
 
 ## Screenshots
 
-* Home Page
-![Home](./images/Home.png)
-* Sign Up
-![Sign-up](./images/Signup.png)
-* Login
-![Login Page](./images/Login.png)
-* View Posts and Add Comments
-![Posts and Comments](./images/Comment.png)
-* Dashboard/New Post
-![Dashboard Page](./images/Dashboard.png)
-* Update/Delete
-![Update/Delete](./images/UpdateAndDelete.png)
+- Home Page
+  ![Home](./images/Home.png)
+- Sign Up
+  ![Sign-up](./images/Signup.png)
+- Login
+  ![Login Page](./images/Login.png)
+- View Posts and Add Comments
+  ![Posts and Comments](./images/Comment.png)
+- Dashboard/New Post
+  ![Dashboard Page](./images/Dashboard.png)
+- Update/Delete
+  ![Update/Delete](./images/UpdateAndDelete.png)
 
-[*back to top*](#table-of-contents)
+[_back to top_](#table-of-contents)
 
 ## Links
 
 [![Tweet about this](https://img.shields.io/static/v1.svg?label=Tweet%20about%20this&message=🎵&color=blue&logo=twitter&style=social)](https://rb.gy/4mykl)
 
-* GitHub Repo: [Tech-Blog](https://github.com/Ronin1702/E-commerce-Back-End)
-* Deployed *Heroku* Application: [Tech-Blog-3000](https://tech-blog-3000-6aa1a4d8137a.herokuapp.com/)
+- GitHub Repo: [Tech-Blog](https://github.com/Ronin1702/E-commerce-Back-End)
+- Deployed _Heroku_ Application: [Tech-Blog-3000](https://tech-blog-3000-6aa1a4d8137a.herokuapp.com/)
 
-[*back to top*](#table-of-contents)
+[_back to top_](#table-of-contents)
 
 ## License
 
-* This application is licensed by [![MIT](https://img.shields.io/static/v1.svg?label=📃%20License&message=MIT&color=important)](./LICENSE).
+- This application is licensed by [![MIT](https://img.shields.io/static/v1.svg?label=📃%20License&message=MIT&color=important)](./LICENSE).
 
-[*back to top*](#table-of-contents)
+[_back to top_](#table-of-contents)
 
 ---
+
 [![Copyright](https://img.shields.io/static/v1.svg?label=Tech%20Blog%20©️%20&message=%202023%20Kai%20Chen&labelColor=informational&color=033450)](https://kaichen.biz)
